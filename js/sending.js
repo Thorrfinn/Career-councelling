@@ -46,7 +46,7 @@ app.factory('questiondata' , function(){
 app.factory('user',function(){
 
     var service = {};
-    service.username = 'Rohit Bansal';
+    service.username = 'Pushkaraj';
 
     service.personality = 1;
     service.interest =  [0,7,3] ;
