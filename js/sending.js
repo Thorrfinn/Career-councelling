@@ -5,22 +5,21 @@ app.factory('subject',function(){
 
     var service = {};
 
-    service.pmap = new Map([[0,'Conventional'],
-                            [1,'Realistic'],
-                            [2,'Artistic'],
-                            [3,'Investigatory'],
-                            [4,'Social'],
-                            [5,'Enterprising']]);
+    service.pmap = new Map([[0, 'OPENNESS'],
+        [1, 'CONSCIENTIOUSNESS'],
+        [2, 'EXTRAVERSION'],
+        [3, 'AGREEABLENESS'],
+        [4, 'NEUROTICISM']]);
     
-    service.imap = new Map([[0,'Science'],
-                            [1,'Maths'],
-                            [2,'Geography'],
-                            [3,'History'],
-                            [4,'Economics'],
-                            [5,'Political Science'],
-                            [6,'Phycology'],
-                            [7,'Arts'],
-                            [8,'Research']]);
+    service.imap = new Map([[0, 'Logical and Mathematical'],
+        [1, 'Visual and Spatial'],
+        [2, 'Linguistic'],
+        [3, 'Musical '],
+        [4, 'Bodily Kinesthetics'],
+        [5, 'Interpersonal '],
+        [6, 'Intrapersonal'],
+        [7, 'Naturalistic'],
+        [8, 'Existential']]);
 
     return service ;
 });
@@ -29,15 +28,78 @@ app.factory('questiondata' , function(){
 
     var service = {}
     
-    service.personality =[[1,'I like to build things.'],[1,'I like to take care of animals.'],[1,'I like putting things together or assembling things.'],[1,'I like to cook.'],[1,'I am a practical person.'],[1,'I like working outdoors.'],[1,'I like to assemble electronic parts.'],[1,'I like to work on cars.'],[1,'I like to build things.'],
-                         [0,'I wouldn’t mind working 8 hours per day in an office.'],[0,'I pay attention to details.'],[0,'I like to do filing or typing.'],[0,'I am good at keeping records of my work.'] ,[0,'I would like to work in an office.'],[0,'I like to organize things(files, desks/offices).'],[0,'I like to have clear instructions  to follow.'],
-                         [2,'I am good at working independently.'],[2,'I like to read about art and music.'],[2,'I enjoy creative writing.'],[2,'I am a creative person.'],[2,'I like to play instruments or sing.'],[2,'I like acting in plays.'],[2,'I like to draw.'],[2,'I love writing songs.'],[2,'I am good at working independently.'],[2,'I like to read about art and music.'],
-                         [3,'I like to do experiments.'],[3,'I enjoy trying to figure out how things work.'],[3,'I enjoy science.'],[3,'I like to analyze things (problems/ situations).'],[3,'I like working with numbers or charts.'],[3,'I’m good at math.'],[3,'I love studing animal behaviors.'],[3,'I like to do puzzles.'],[3,'I like to do experiments.'],
-                         [4,'I like to work in teams.'],[4,'I like to teach or train people.'],[4,'I like trying to help people solve their problems.'],[4,'I am interested in healing people.'],[4,'I enjoy learning about other cultures.'],[4,'I like to get into discussions about issues.'],[4,'I like helping people.'],[4,'I love helping elderly people with their daily activities.'],[4,'I like to work in teams.'],[4,'I like to teach or train people.'],
-                         [5,'I am an ambitious person.'],[5,'I set goals for myself.'],[5,'I like to try to influence or persuade people.'],[5,'I like selling things.'],[5,'I am quick to take on new responsibilities.'],[5,'I would like to start my own business.'],[5,'I like to lead.'],[5,'I like to give speeches.']  ,[5,'I am an ambitious person.'],[5,'I set goals for myself.']
+    service.personality =[ [0, 'Would you like if the position of your work desk gets slightly changed?'],
+        [0, 'Are you open to try bungee jumping? '],
+        [0, 'Do you like and enjoy to take up and solve new challenges?'],
+        [0, 'Do you like the abstract thinking of children?'],
+        [0, 'Have you ever disassembled and assembled any thing just out of curiosity?'],
+        [1, 'Do you spend enough time in order to prepare for an occasion or event?'],
+        [1, 'Do you enjoy solving “find the mistake in the picture” quizzes?'],
+        [1, 'Do you like being on time a follow the schedule throughout the day? '],
+        [1, 'Do you think you are a perfectionist'],
+        [1, 'Do you prioritize important work to do before and complete the certain task? '],
+        [2, 'Do you often start conversations with strangers?'],
+        [2, 'Do you like having wide social circle of friends and acquaintances?'],
+        [2, 'Do you feel energized being surrounded with people?  '],
+        [2, 'You don’t like to give thought about what you are going to speak? '],
+        [2, 'Do you like being the centre of attention? g.'],
+        [3, 'Do you care about the cries going on in our society? '],
+        [3, 'Do you feel empathy about the people who are below poverty line?'],
+        [3, 'Have you ever assisted or helped the people in crisis? '],
+        [3, 'You don’t care about other people judging you? '],
+        [3, 'Do you enjoy making other people happy? '],
+        [4, 'Do you go through a lot of stress in certain conditions?'],
+        [4, 'There are dramatic shifts in your mood?'],
+        [4, 'You often get upset? '],
+        [4, 'You fee anxious a lot? '],
+        [4, 'You struggle to get normal after a stressful event? '],
                          ];
 
-    service.interest = [[0,'You  like maths.'],[0,'You like algebra.'],[0,'you like pythegorem theorem.'],[1,'You like Physics.'],[1,'You like newton.'],[2,'You like organic chemistry.'],[2,'You like chemisry.'],[0,'You  like maths.'],[0,'You like algebra.'],[0,'you like pythegorem theorem.'],[1,'You like Physics.'],[1,'You like newton.'],[2,'You like organic chemistry.'],[2,'You like chemisry.'],[0,'You  like maths.'],[0,'You like algebra.'],[0,'you like pythegorem theorem.'],[1,'You like Physics.'],[1,'You like newton.'],[2,'You like organic chemistry.'],[2,'You like chemisry.'],[0,'You  like maths.'],[0,'You like algebra.'],[0,'you like pythegorem theorem.'],[1,'You like Physics.'],[1,'You like newton.'],[2,'You like organic chemistry.']];
+    service.interest = [[0, 'I like measuring or categorizing stuff.'],
+        [0, 'I have always excelled in math and science at school.'],
+        [0, 'I enjoy challenges that require lateral thinking, like chess.'],
+        [0, 'I am good with numbers.'],
+
+        [1, 'I enjoy sequential puzzles like Rubik’s cube or Sudoku'],
+        [1, 'I vividly remember details about furniture and the interior decoration of rooms that I’ve been in'],
+        [1, 'I am good at reading maps and finding my way around unfamiliar places'],
+        [1, 'I like sewing, carving, model-building, or other activities that involve dexterity.'],
+
+        [2, 'I am interested in writing poetry, quotes, stories, or journals.'],
+        [2, 'I like languages and/or the social sciences.'],
+        [2, 'I often look things up in the dictionary.'],
+        [2, 'I love reading.'],
+
+        [3, 'I enjoy singing or playing a musical instrument.'],
+        [3, 'I am often humming a song or tune to myself in my head.'],
+        [3, 'I enjoy creative writing.Music is one of my biggest interests.'],
+        [3, 'I can tell when a note is off-key.'],
+
+        [4, 'I find it easiest to solve problems when my body is in motion'],
+        [4, 'I am interested in sports.'],
+        [4, 'I understand everything after practical performing. '],
+        [4, 'I can’t seat stable at 1 place for more than half hour. '],
+
+        [5, 'I like dancing, sports, or working out.']
+        [5, 'I am good at making a good impression when meeting new people.'],
+        [5, 'I am good at mediating disputes or conflicts between individuals.'],
+        [5, 'Others often come to me for support or advice.'],
+
+        [6, 'I am good at detecting dishonesty in others.'],
+        [6, 'I spend a lot of time analysing my own emotions and reactions.'],
+        [6, 'I enjoy spending time alone, processing my own emotions and reactions to things.'],
+        [6, 'It is easy for me to identify how I feel and why.'],
+
+        [7, 'I spend a lot of time reflecting on my own reactions to things.'],
+        [7, 'I don’t mind getting my hands dirty from activities that involve creating, fixing, or building things.'],
+        [7, 'I feel the most alive when I am in contact with nature.'],
+        [7, 'I enjoy learning about different species of plants and animals'],
+
+
+        [8, 'I keep going over deep questions about life and existence that seem foolish to others.'],
+        [8, 'I enjoy learning about how the various world religions have attempted to answer “the big questions.”.'],
+        [8, 'I often contemplate questions related to theology or philosophy.'],
+        [8, 'Questions like “Where is humanity heading?” or Why are we here?” are of interest to me.'],];
     
     return service;
 
