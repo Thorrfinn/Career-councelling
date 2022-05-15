@@ -108,7 +108,7 @@ app.factory('questiondata' , function(){
 app.factory('user',function(){
 
     var service = {};
-    service.username = 'Pushkaraj';
+    service.username = 'User';
 
     service.personality = 1;
     service.interest =  [0,7,3] ;
